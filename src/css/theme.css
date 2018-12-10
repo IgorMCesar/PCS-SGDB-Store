@@ -1,0 +1,195 @@
+/* COLORS */
+/* titlepbar 212121 */
+.level1{
+  background-color: #22262E !important;
+  /* background-color: #121212; */
+}
+
+/* inner border 303030 */
+.level2{
+  background-color: #585A61 !important;
+  /* background-color: #181818; */
+}
+
+/* sidebar 424242*/
+.level3{
+  background-color: #313641 !important;
+  /* background-color: #282828; */
+}
+
+/* toptab white*/
+.level4{
+  background-color: #33363F !important;
+  /* background-color: #4B4F50; */
+}
+
+/* inner selector 7575757 */
+.level5,
+.expansion-panel__header{
+  background-color: #272A31 !important;
+}
+
+/* inner background 212121 */
+.level6{
+  background-color: #1C1E23 !important;
+}
+
+/* .material-icons,
+.list__tile__content {
+  color: #8D8D8D !important;
+} */
+
+/* Tree Select Color */
+
+.vue-treeselect__control {
+  border: 1px solid #16181C;
+  background: #16181C;
+}
+.vue-treeselect:not(.vue-treeselect--disabled):not(.vue-treeselect--focused) .vue-treeselect__control:hover {
+  border-color: #4F5053;
+}
+.vue-treeselect--focused:not(.vue-treeselect--open) .vue-treeselect__control {
+  border-color: #039BE5;
+}
+.vue-treeselect--disabled .vue-treeselect__control {
+  background-color: #4F5053;
+}
+.vue-treeselect--open .vue-treeselect__control,
+.vue-treeselect__control:hover {
+  border-color: #4F5053;
+}
+.vue-treeselect__placeholder {
+  color: #BDBDBD;
+}
+.vue-treeselect__single-value {
+  color: #E3F2FD;
+}
+.vue-treeselect--focused.vue-treeselect--searchable .vue-treeselect__single-value {
+  color: #BDBDBD;
+}
+.vue-treeselect__multi-value-item {
+  background: #E3F2FD;
+  color: #039BE5;
+}
+.vue-treeselect:not(.vue-treeselect--disabled) .vue-treeselect__multi-value-item:not(.vue-treeselect__multi-value-item-disabled):hover {
+  background: #E3F2FD;
+  color: #039BE5;
+}
+.vue-treeselect__multi-value-item.vue-treeselect__multi-value-item-disabled {
+  background: #F5F5F5;
+  color: #757575;
+}
+.vue-treeselect--disabled .vue-treeselect__multi-value-item {
+  background: #fff;
+  border-color: #e5e5e5;
+  color: #555;
+}
+.vue-treeselect__value-remove {
+  color: #039BE5;
+  border-left: 1px solid #fff;
+}
+.vue-treeselect__multi-value-item:hover .vue-treeselect__value-remove {
+  color: #E53935;
+}
+.vue-treeselect__limit-tip-text {
+  color: #BDBDBD;
+}
+.vue-treeselect__x-container {
+  color: #ccc;
+}
+.vue-treeselect__x-container:hover {
+  color: #E53935;
+}
+.vue-treeselect__control-arrow {
+  color: #ccc;
+}
+.vue-treeselect:not(.vue-treeselect--disabled) .vue-treeselect__control-arrow-container:hover .vue-treeselect__control-arrow {
+  color: #616161;
+}
+.vue-treeselect__menu {
+  border: 1px solid #4F5053;
+  background: #16181C;
+}
+.vue-treeselect--open-below .vue-treeselect__menu {
+  border-top-color: #4F5053;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.vue-treeselect--open-above .vue-treeselect__menu {
+  border-bottom-color: #f2f2f2;
+}
+.vue-treeselect__option--highlight {
+  background: #3E424E;
+}
+.vue-treeselect--single .vue-treeselect__option--selected {
+  background: #353E52;
+}
+.vue-treeselect--single .vue-treeselect__option--selected:hover {
+  background: #384665;
+}
+.vue-treeselect__option-arrow {
+  color: #ccc;
+}
+.vue-treeselect__option-arrow-container:hover .vue-treeselect__option-arrow,
+.vue-treeselect--branch-nodes-disabled .vue-treeselect__option:hover .vue-treeselect__option-arrow {
+  color: #616161;
+}
+.vue-treeselect__option--disabled .vue-treeselect__label-container {
+  color: rgba(0, 0, 0, 0.25);
+}
+.vue-treeselect__checkbox--unchecked {
+  border-color: #E0E0E0;
+  background: #fff;
+}
+.vue-treeselect__label-container:hover .vue-treeselect__checkbox--unchecked {
+  border-color: #039BE5;
+  background: #fff;
+}
+.vue-treeselect__checkbox--indeterminate {
+  border-color: #039BE5;
+  background: #039BE5;
+}
+.vue-treeselect__label-container:hover .vue-treeselect__checkbox--indeterminate {
+  border-color: #039BE5;
+  background: #039BE5;
+}
+.vue-treeselect__checkbox--checked {
+  border-color: #039BE5;
+  background: #039BE5;
+}
+.vue-treeselect__label-container:hover .vue-treeselect__checkbox--checked {
+  border-color: #039BE5;
+  background: #039BE5;
+}
+.vue-treeselect__checkbox--disabled {
+  border-color: #E0E0E0;
+  background-color: #f7f7f7;
+}
+.vue-treeselect__label-container:hover .vue-treeselect__checkbox--disabled {
+  border-color: #E0E0E0;
+  background-color: #f7f7f7;
+}
+.vue-treeselect__tip {
+  color: #757575;
+}
+.vue-treeselect__error-tip .vue-treeselect__retry {
+  color: #039BE5;
+}
+.vue-treeselect__icon-warning {
+  background: #FB8C00;
+}
+.vue-treeselect__icon-warning::after {
+  border: 0 solid #fff;
+}
+.vue-treeselect__icon-error {
+  background: #E53935;
+}
+.vue-treeselect__icon-error::before,
+.vue-treeselect__icon-error::after {
+  background: #fff;
+}
+.vue-treeselect__icon-loader::before {
+  background: #039BE5;
+}
+.vue-treeselect__icon-loader::after {
+  background: #B3E5FC;
+}

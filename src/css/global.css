@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+#app {
+  font-family: 'Roboto';
+  height:100%;
+}
+
+body {
+  height:100vh;
+}
+
+.application {
+  height:100%;
+}
+
+main {
+  height:100%;
+}
+
+.full-size {
+  height:100%;
+  width: 100%;
+}
+
+.full-height {
+  max-height:100%;
+}
+
+.scroll-auto {
+  overflow: auto;
+}
+
+
+*.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html{
+  overflow: hidden;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag; 
+}
+.drag {
+  -webkit-app-region: drag; 
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+

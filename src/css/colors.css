@@ -1,0 +1,82 @@
+COLORS
+/* titlepbar 212121 */
+.level1{
+  background-color: #121212 !important;
+  /* background-color: #121212; */
+}
+
+/* inner border 303030 */
+.level2{
+  background-color: #121212 !important;
+  /* background-color: #181818; */
+}
+
+/* sidebar 424242*/
+.level3{
+  background-color: #121212 !important;
+  /* background-color: #282828; */
+}
+
+/* toptab white*/
+.level4{
+  background-color: #303030 !important;
+  /* background-color: #4B4F50; */
+}
+
+/* inner selector 7575757 */
+.level5,
+.expansion-panel__header{
+  background-color: #424242 !important;
+}
+
+/* inner background 212121 */
+.level6{
+  background-color: #17181B !important;
+}
+
+.material-icons,
+.list__tile__content {
+  color: #8D8D8D !important;
+}
+
+
+/* COLORS */
+/* titlepbar 212121 */
+.level1{
+  background-color: #22262E !important;
+  /* background-color: #121212; */
+}
+
+/* inner border 303030 */
+.level2{
+  background-color: #585A61 !important;
+  /* background-color: #181818; */
+}
+
+/* sidebar 424242*/
+.level3{
+  background-color: #313641 !important;
+  /* background-color: #282828; */
+}
+
+/* toptab white*/
+.level4{
+  background-color: #33363F !important;
+  /* background-color: #4B4F50; */
+}
+
+/* inner selector 7575757 */
+.level5,
+.expansion-panel__header{
+  background-color: #272A31 !important;
+}
+
+/* inner background 212121 */
+.level6{
+  background-color: #1C1E23 !important;
+}
+
+/* .material-icons,
+.list__tile__content {
+  color: #8D8D8D !important;
+} */
