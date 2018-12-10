@@ -1,6 +1,6 @@
-# bakamanager
+# PCS-SGDB-Store
 
-> An anime and manga collection manager
+> A project for PCSGB 2018.2 UNIRIO
 
 #### Build Setup
 
