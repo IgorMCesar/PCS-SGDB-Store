@@ -64,13 +64,13 @@ ipcMain.on('/test', (event) => {
 });
 
 ipcMain.on('/get/product-list', (event) => {
-  client.query('SELECT nome, foto, descricao, categoria, valor FROM Artigo;', (err, res) => {
+  client.query('SELECT nome, foto, descricao, categoria, valor, id FROM Artigo WHERE NOT EXISTS (SELECT id FROM Transacao WHERE id = Artigo.id);', (err, res) => {
     event.sender.send('/got/product-list', res);
   });
 });
 
 ipcMain.on('/get/auction-list', (event) => {
-  client.query('SELECT foto, nome, descricao, categoria, (SELECT nome FROM Cliente WHERE Cliente.id = idUsuarioVendedor) AS nomeUsuarioVendedor, dataInicio, dataFim, lanceMinimo FROM Leilao;', (err, res) => {
+  client.query('SELECT foto, nome, descricao, categoria, (SELECT nome FROM Cliente WHERE Cliente.id = idUsuarioVendedor) AS nomeUsuarioVendedor, dataInicio, dataFim, lanceMinimo, id FROM Leilao;', (err, res) => {
     event.sender.send('/got/auction-list', res);
   });
 });
@@ -89,11 +89,21 @@ ipcMain.on('/get/historyAuction', (event) => {
 });
 
 ipcMain.on('/post/new-product', (event, params) => {
-  const values = [params.produto, params.image, params.desc, params.categoria, params.valor];
-  const text = 'INSERT INTO Artigo(nome, foto, descricao, categoria, valor) VALUES($1,$2,$3,$4,$5);';
+  const values = [params.produto, params.image, params.desc, params.categoria, '1', params.valor];
+  const text = 'INSERT INTO Artigo(nome, foto, descricao, categoria, idUsuarioVendedor, valor) VALUES($1,$2,$3,$4,$5,$6);';
   client.query(text, values)
     .then((res) => {
       event.sender.send('/posted/new-product', res);
+    })
+    .catch(e => console.error(e.stack));
+});
+
+ipcMain.on('/post/new-purchase', (event, params) => {
+  const values = ['2', '1', params.idArtigo, new Date().toISOString()];
+  const text = 'INSERT INTO Transacao(idUsuarioComprador, idUsuarioVendedor, idArtigo, dataTransacao) VALUES($1,$2,$3,$4);';
+  client.query(text, values)
+    .then((res) => {
+      event.sender.send('/posted/new-purchase', res);
     })
     .catch(e => console.error(e.stack));
 });

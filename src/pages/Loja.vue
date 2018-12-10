@@ -47,7 +47,7 @@
                 <v-card-actions>
                   <div>R$ {{produtos[i].valor}}</div>
                   <v-spacer></v-spacer>
-                  <v-btn flat class="blue--text">Comprar</v-btn>
+                  <v-btn flat class="blue--text" @click="buy(produtos[i].id)">Comprar</v-btn>
                 </v-card-actions>
             </v-card>
             </div>
@@ -102,6 +102,16 @@ export default {
     };
   },
   methods: {
+    buy(idArtigo) {
+      this.$electron.ipcRenderer.send('/post/new-purchase', {
+        idArtigo,
+      });
+      this.$electron.ipcRenderer.once('/posted/new-purchase', (event, response) => {
+        console.log(response);
+        this.produtos = this.pegarListaDeProdutos();
+        alert('Produto Comprado!');
+      });
+    },
     generateSeasonOptions(currentSeason) {
       const options = [];
       let helper = {};
@@ -151,6 +161,9 @@ export default {
     this.seasonOptions = this.generateSeasonOptions(currentSeason);
   },
   watch: {
+    produtos() {
+      console.log(this.produtos);
+    },
     filterValue() {
       this.displayedSeasonList = this.organizeSeason(this.SeasonList, this.animeTypes, this.sortValue, this.searchInput, this.filterValue);
     },
